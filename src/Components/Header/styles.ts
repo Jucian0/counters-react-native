@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { flexBase } from '../../../styles';
+import styled from 'styled-components'
+import { flexBase } from '../../../styles'
 
 
 export const Container = styled.View`
@@ -12,7 +12,7 @@ export const Container = styled.View`
     width:100%;
     height:100px;
     position:absolute;
-`;
+`
 
 export const TextHeader = styled.Text`
     color: #fff;

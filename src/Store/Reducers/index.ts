@@ -1,15 +1,15 @@
 import { createSlice, combineReducers, AnyAction } from 'redux-starter-kit'
 
 export interface Counter {
-    value?: number;
-    title?: string;
-    id?: string;
+    value?: number
+    title?: string
+    id?: string
 }
 
 export interface CountersState {
-    counter: Counter;
-    counters: Array<Counter>;
-    selected: string;
+    counter: Counter
+    counters: Array<Counter>
+    selected: string
 }
 
 export const INITIAL_STATE: CountersState = {
@@ -18,27 +18,28 @@ export const INITIAL_STATE: CountersState = {
     selected: ''
 }
 
+const addCounter = (state: CountersState, action: AnyAction) => ({
+    ...state,
+    counters: [...state.counters, action.payload],
+    selected: action.payload.id
+})
+
 const editCounter = (state: CountersState, action: AnyAction) => ({
     ...state,
     counters: state.counters.map(counter => counter.id === action.payload.id ? ({
         ...action.payload
     }) : counter)
-});
-
-const addCounter = (state: CountersState, action: AnyAction) => ({
-    ...state,
-    counters: [...state.counters, action.payload]
-});
+})
 
 const removeCounter = (state: CountersState, action: AnyAction) => ({
     ...state,
     counters: state.counters.filter(counter => counter.id !== action.payload),
-});
+})
 
 const setSelected = (state: CountersState, action: AnyAction) => ({
     ...state,
     selected: state.counters.find(counter => counter.id === action.payload).id
-});
+})
 
 const increment = (state: CountersState, action: AnyAction) => ({
     ...state,
@@ -46,7 +47,7 @@ const increment = (state: CountersState, action: AnyAction) => ({
         ...counter,
         value: counter.value + 1
     }) : counter)
-});
+})
 
 const decrement = (state: CountersState, action: AnyAction) => ({
     ...state,
@@ -76,11 +77,11 @@ export const counters = createSlice({
         decrement,
         reset
     }
-});
+})
 
 
 const AppReducer = combineReducers({
     counters: counters.reducer
-});
+})
 
-export default AppReducer;
+export default AppReducer

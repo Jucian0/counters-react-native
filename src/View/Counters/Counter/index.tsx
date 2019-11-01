@@ -1,23 +1,14 @@
-import React, { FunctionComponent, useEffect } from 'react';
-import { Container, CounterName, Number, Display } from "./styles";
-import { Counter as CounterType } from '../../../Store/Reducers';
-import Control from '../Control';
-import { Animated } from 'react-native';
+import React, { FunctionComponent } from 'react'
+import { Container, CounterName, Number, Display } from "./styles"
+import { Counter as CounterType } from '../../../Store/Reducers'
+import Control from '../Control'
 
 interface CounterProps {
-    selected: boolean;
+    selected: boolean
     counter: CounterType
 }
 
 const Counter: FunctionComponent<CounterProps> = ({ selected, counter }) => {
-
-    useEffect(()=>{
-
-        if(!!selected){
-            new Animated.Value(500)
-        }
-
-    },[selected])
 
     return (
         <Container selected={selected}>
@@ -37,4 +28,4 @@ const Counter: FunctionComponent<CounterProps> = ({ selected, counter }) => {
     )
 }
 
-export default Counter;
+export default Counter

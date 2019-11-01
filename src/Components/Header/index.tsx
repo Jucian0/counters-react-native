@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
-import { Container, TextHeader } from "./styles";
+import React, { FunctionComponent } from 'react'
+import { Container, TextHeader } from "./styles"
 
 const Header:FunctionComponent = ({children}) => {
     return (
@@ -9,4 +9,4 @@ const Header:FunctionComponent = ({children}) => {
     )
 }
 
-export default Header;
+export default Header

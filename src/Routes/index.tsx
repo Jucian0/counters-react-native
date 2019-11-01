@@ -1,7 +1,7 @@
-import List from '../View/Counters/List';
-import Config from '../View/Config/Config';
-import {Router, Stack, Scene} from 'react-native-router-flux';
-import React from 'react';
+import List from '../View/Counters/List'
+import Config from '../View/Config/Config'
+import {Router, Stack, Scene} from 'react-native-router-flux'
+import React from 'react'
 
 
 const Routes = () => (
@@ -11,7 +11,7 @@ const Routes = () => (
          <Scene key="config" component={Config} title="Config" hideNavBar/>
       </Stack>
    </Router>
-);
+)
 
-export default Routes;
+export default Routes
 

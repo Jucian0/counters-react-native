@@ -1,19 +1,19 @@
-import React, { FunctionComponent } from 'react';
-import Counter from "../Counter";
-import { useSelector, useDispatch } from 'react-redux';
-import { ApplicationState } from '../../../Store';
-import { counters as countersActions, Counter as CounterType } from '../../../Store/Reducers';
-import { TouchableOpacity, ScrollView } from 'react-native';
-import Header from '../../../Components/Header';
-import { Container, Row, Col, TextButton } from '../../../../styles';
-import { Button } from './styles';
-import { Actions } from 'react-native-router-flux';
+import React, { FunctionComponent } from 'react'
+import Counter from "../Counter"
+import { useSelector, useDispatch } from 'react-redux'
+import { ApplicationState } from '../../../Store'
+import { counters as countersActions, Counter as CounterType } from '../../../Store/Reducers'
+import { TouchableOpacity, ScrollView } from 'react-native'
+import Header from '../../../Components/Header'
+import { Container, Row, Col, TextButton } from '../../../../styles'
+import { Button } from './styles'
+import { Actions } from 'react-native-router-flux'
 
 
 const List: FunctionComponent = () => {
-    const { actions } = countersActions;
-    const counters = useSelector<ApplicationState, Array<CounterType>>(state => state.counters.counters);
-    const selected = useSelector<ApplicationState, string>(state => state.counters.selected);
+    const { actions } = countersActions
+    const counters = useSelector<ApplicationState, Array<CounterType>>(state => state.counters.counters)
+    const selected = useSelector<ApplicationState, string>(state => state.counters.selected)
     const dispatch = useDispatch()
 
     const setSelected = (id: string) =>
@@ -51,4 +51,4 @@ const List: FunctionComponent = () => {
     )
 }
 
-export default List;
+export default List

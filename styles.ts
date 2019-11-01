@@ -1,4 +1,4 @@
-import styled,{css} from 'styled-components';
+import styled,{css} from 'styled-components'
 
 export const AppStyles = styled.View`
     display:flex;
@@ -7,12 +7,12 @@ export const AppStyles = styled.View`
     align-items: center;
     background-color: #1B2D56;
     height:100%;
-`;
+`
 
 export const RouterContainer = styled.View`
     width:100%;
     height:92%;
-`;
+`
 
 export const shadow = css`
     shadow-color: #000;
@@ -20,12 +20,12 @@ export const shadow = css`
     shadow-opacity: 0.8;
     shadow-radius: 5;
     elevation: 5;
-`;
+`
 
 export const flexBase = css`
     display:flex;
     flex-direction:row;
-`;
+`
 
 
 export const Container = styled.View`
@@ -35,7 +35,7 @@ export const Container = styled.View`
     align-items:center;
     background-color: #1D89CD;
     height:100%;
-`;
+`
 
 export const Col = styled.View`
     display:flex;
@@ -45,7 +45,7 @@ export const Col = styled.View`
     padding:20px;
     width:100%;
     height:auto;
-`;
+`
 
 
 export const Row = styled.SafeAreaView<{ height: string}>`
@@ -56,11 +56,11 @@ export const Row = styled.SafeAreaView<{ height: string}>`
     flex-direction:row;
     justify-content:center;
     align-items:center;
-`;
+`
 
 export const TextButton = styled.Text`
     font-family:'Roboto';
     font-weight:bold;
     color: #333;
     font-size:18px;
-`;
+`

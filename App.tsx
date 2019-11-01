@@ -1,10 +1,10 @@
-import React, { useEffect, FunctionComponent } from 'react';
-import Routes from './src/Routes';
-import { AppStyles, RouterContainer } from './styles';
-import * as Font from 'expo-font';
-import MenuTabs from './src/Components/MenuTabs';
-import Header from './src/Components/Header';
-import store from './src/Store';
+import React, { useEffect, FunctionComponent } from 'react'
+import Routes from './src/Routes'
+import { AppStyles, RouterContainer } from './styles'
+import * as Font from 'expo-font'
+import MenuTabs from './src/Components/MenuTabs'
+import Header from './src/Components/Header'
+import store from './src/Store'
 import {Provider} from 'react-redux'
 
 
@@ -16,7 +16,7 @@ const App: FunctionComponent = () => {
             'Roboto-bold': require('./assets/fonts/Roboto-Bold.ttf'),
             'Roboto-light': require('./assets/fonts/Roboto-Light.ttf')
         })
-    }, []);
+    }, [])
 
     return (
         <AppStyles>
@@ -28,7 +28,7 @@ const App: FunctionComponent = () => {
             </Provider>
         </AppStyles>
     )
-};
+}
 
-export default App;
+export default App
 

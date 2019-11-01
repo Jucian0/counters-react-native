@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { shadow, flexBase } from '../../../../styles';
+import styled from 'styled-components'
+import { shadow, flexBase } from '../../../../styles'
 
 export const Container = styled.View<{selected:boolean}>`
     display:flex;
@@ -13,23 +13,23 @@ export const Container = styled.View<{selected:boolean}>`
     border-radius:5px;
     opacity:${({selected})=> selected ? 1: .7};
     ${shadow}
-`;
+`
 
 export const CounterName = styled.Text`
     font-family:'Roboto';
     font-weight:bold;
     font-size: 20px;
     color:#A2A2A2;
-`;
+`
 
 export const Display = styled.View<{align: string}>`
     ${flexBase}
     justify-content: ${({align})=> align};
-`;
+`
 
 export const Number = styled.Text`
     font-family:'Roboto';
     font-weight:bold;
     font-size: 80px;
     color:#333;
-`;
+`

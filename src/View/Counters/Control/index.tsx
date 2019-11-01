@@ -1,15 +1,15 @@
-import React, { FunctionComponent } from 'react';
-import { Container, Button } from './styles';
-import { Ionicons } from '@expo/vector-icons';
-import { useDispatch } from 'react-redux';
-import { counters } from '../../../Store/Reducers';
+import React, { FunctionComponent } from 'react'
+import { Container, Button } from './styles'
+import { Ionicons } from '@expo/vector-icons'
+import { useDispatch } from 'react-redux'
+import { counters } from '../../../Store/Reducers'
 
 interface ControlProps{
     selected:string
 }
 
 const Control: FunctionComponent<ControlProps> = ({selected}) => {
-    const {actions} = counters;
+    const {actions} = counters
 
     const dispatch = useDispatch()
 
@@ -28,4 +28,4 @@ const Control: FunctionComponent<ControlProps> = ({selected}) => {
     )
 }
 
-export default Control;
+export default Control

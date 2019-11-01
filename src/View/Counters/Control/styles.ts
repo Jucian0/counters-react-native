@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { shadow, flexBase } from '../../../../styles';
+import styled from 'styled-components'
+import { shadow, flexBase } from '../../../../styles'
 
 export const Container = styled.View`
     ${flexBase}
@@ -7,7 +7,7 @@ export const Container = styled.View`
     align-items:center;
     width:100%;
     height:70px;
-`;
+`
 
 export const Button = styled.TouchableOpacity`
     ${flexBase}
@@ -19,5 +19,5 @@ export const Button = styled.TouchableOpacity`
     height:60px;
     border-radius:30px;
     ${shadow}
-`;
+`
 

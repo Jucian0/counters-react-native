@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react';
-import { Menu, Button } from './styles';
-import { Ionicons } from '@expo/vector-icons';
-import {Actions} from 'react-native-router-flux';
+import React, { FunctionComponent } from 'react'
+import { Menu, Button } from './styles'
+import { Ionicons } from '@expo/vector-icons'
+import {Actions} from 'react-native-router-flux'
 
 const MenuTabs: FunctionComponent = () => {
 
@@ -17,4 +17,4 @@ const MenuTabs: FunctionComponent = () => {
     )
 }
 
-export default MenuTabs;
+export default MenuTabs

@@ -1,28 +1,28 @@
-import React, { FunctionComponent, useState } from 'react';
-import { Button, CounterText, Buttons, TextInput} from "./styles";
-import Counter from "../../Counters/Counter";
+import React, { FunctionComponent, useState } from 'react'
+import { Button, CounterText, Buttons, TextInput} from "./styles"
+import Counter from "../../Counters/Counter"
 import { useSelector, useDispatch } from 'react-redux'
-import { counters, Counter as CounterType } from "../../../Store/Reducers";
-import { ApplicationState } from '../../../Store';
-import { Actions } from 'react-native-router-flux';
-import { TouchableOpacity } from 'react-native';
-import Header from '../../../Components/Header';
-import { Container, Row, Col, TextButton } from '../../../../styles';
+import { counters, Counter as CounterType } from "../../../Store/Reducers"
+import { ApplicationState } from '../../../Store'
+import { Actions } from 'react-native-router-flux'
+import { TouchableOpacity } from 'react-native'
+import Header from '../../../Components/Header'
+import { Container, Row, Col, TextButton } from '../../../../styles'
 
 
 const Config: FunctionComponent = () => {
     const [edit, setEdit] = useState<CounterType>({})
-    const { actions } = counters;
+    const { actions } = counters
     const counter = useSelector<ApplicationState, CounterType>(
         state => state.counters.counters.find(
             counter => counter.id === state.counters.selected)
     )
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
 
 
     const deleteAndRedirect = () => {
-        dispatch(actions.removeCounter(counter.id));
+        dispatch(actions.removeCounter(counter.id))
         Actions.pop()
     }
 
@@ -34,10 +34,10 @@ const Config: FunctionComponent = () => {
                 id: Math.floor(Math.random() * 1000).toString(),
                 value: 0,
                 title: edit.title
-            }));
+            }))
         }
 
-        setEdit({});
+        setEdit({})
     }
 
     return (
@@ -81,4 +81,4 @@ const Config: FunctionComponent = () => {
     )
 }
 
-export default Config;
+export default Config
